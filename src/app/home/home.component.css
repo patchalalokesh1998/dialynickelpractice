@@ -1,0 +1,33 @@
+
+
+    .header-rightpart
+    {
+        width:10%;
+    }
+
+    .navbar-light .navbar-nav .nav-item .profile {
+       height:30px;
+       width: 30px;
+       border-radius: 15px;
+       background-image: url('../../assets/dubai.png');
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+
+	@media(max-width:767px)and (min-width:991px)
+    {
+
+    .header-rightpart
+    {
+        width:33%
+    }
+    }
+
+    @media(min-width:992px)
+    {
+       div>.navbar-expand-lg .navbar-nav .dropdown-menu {
+            left: -69px;
+            position: absolute;
+        }
+    }

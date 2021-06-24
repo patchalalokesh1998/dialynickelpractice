@@ -1,0 +1,27 @@
+<header>
+    <div class="headerouter">
+       <div>
+         <img src="" alt="logo">
+       </div>
+       <div class="searchbar">
+           <input type="search" list="browsers" [(ngModel)]="searchtext"  placeholder="What are you looking for" >
+           <datalist id="browsers">
+            <option  *ngFor="let option of searcharray" [value]="option">
+            
+          </datalist>
+           <input type="search" list="list2" placeholder="Location">
+
+           <datalist id="list2">
+            <option  *ngFor="let option of locations; let i = index" [value]="option.location" (click)="findproducts(i)">
+            
+          </datalist>
+           <button type="button" (click)="addsearchterm();">icon</button>
+       </div>
+       <div></div>
+    </div>
+</header>
+<div class="body">
+    <div *ngFor="let product of products">
+      {{product}}
+    </div>
+</div>

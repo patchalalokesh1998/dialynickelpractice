@@ -1,0 +1,65 @@
+<div class="loginpage">
+    <div class="container">
+        <div class="row align-items-center outerform">
+            <div class="col-md-6 card-left d-none d-md-block ">
+    
+            </div>
+         <div class="col-12 col-md-6 card-right">
+            <form [formGroup]="registerform">
+                <div class="form-group">
+                    <label>Enter Username</label>
+                    <input class="form-control" formControlName="username" [ngClass]="{'is-invalid':registerform.get('username').touched && registerform.get('username').invalid}" type="email" placeholder="Enter Username">
+                    <div class="invalid-feedback" *ngIf="registerform.get('username').hasError('required')">
+                        this field is required
+                     </div>
+                     <div class="invalid-feedback" *ngIf="registerform.get('username').hasError('email')">
+                        email is required
+                     </div>
+                </div>
+                <div class="form-group">
+                  <label>Enter Password</label>
+                  <input class="form-control" formControlName="password" [ngClass]="{'is-invalid':registerform.get('password').touched && registerform.get('password').invalid}" type="password" placeholder="Enter password" >
+                  <div class="invalid-feedback" *ngIf="registerform.get('password').hasError('required')">
+                    this field is required
+                 </div>
+                 <div class="invalid-feedback" *ngIf="registerform.get('password').hasError('pattern')">
+                   should have atleast onespecial character onelower case letter, one uppercase letter, one number
+                </div>
+                <div class="invalid-feedback" *ngIf="registerform.get('password').hasError('minlength')">
+                   password should have minimum of 8 characters
+                </div>
+              </div>
+              <div class="form-group">
+                <label>confirm Password</label>
+                <input class="form-control" formControlName="confirmpassword" [ngClass]="{'is-invalid':registerform.get('confirmpassword').touched && registerform.get('confirmpassword').invalid}" type="password" placeholder="Enter password" >
+                <div class="invalid-feedback" *ngIf="registerform.get('confirmpassword').hasError('required')">
+                  this field is required
+               </div>
+               <div class="invalid-feedback" *ngIf="registerform.get('confirmpassword').hasError('mustMatch')">
+               password and confirmpassword should be match
+             </div>
+              
+            </div>
+            
+              <div style="justify-content: center; display: flex; flex-wrap: wrap;">
+                <div style="display: flex; width:150px; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                    <button  type="submit" class="btn btn-primary" (click)='rigesterformsubmit()' [disabled]="registerform.invalid">
+                        register
+                     </button>
+                     <div class="margin-left:5px;">
+                         <a routerLink="/login">login</a>
+                     </div>
+                </div>
+
+             </div>
+              
+            
+              </form>
+              <div *ngIf="error" style="text-align: center;" class="text-danger">{{error}}</div>
+
+
+         </div>
+    
+        </div>
+    </div>
+    </div>

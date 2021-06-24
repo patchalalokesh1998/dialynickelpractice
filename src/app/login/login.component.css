@@ -1,0 +1,32 @@
+.outerform
+{
+    height:100vh;
+}
+
+.passwordformgroup
+{
+    position: relative;
+}
+
+.showhideicon
+{
+    position: absolute;
+    top: 38px;
+    right: 13px;
+    background-color: transparent;
+}
+.spanicon
+{
+    cursor:pointer;
+}
+.card-left
+{
+ background-image: url('../../assets/dubai.png');   
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 100%;
+ height:100%
+
+}
+

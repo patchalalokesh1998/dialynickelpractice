@@ -1,0 +1,41 @@
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onchooselocation($event)">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+<div class="container mt-4" style="display: flex; align-items: center;" *ngIf="filtercards.length>0; else elseblock;">
+   <button style="height:100px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="btn" (click)="onPreviousSearchPosition()"><i style="color: black;" class="fas fa-angle-left"></i></button>
+        
+   <div #panel id="scroll" style="width:100%; height: 270px;overflow-x:scroll; position: relative; left:0px;transition: 0.5s ease-in; " >
+             
+       <div style="display: inline-block; white-space: nowrap;">
+           <div class="ml-2" style="display: inline-block;" *ngFor="let card of filtercards">
+         
+            <div class="card mt-3">
+                <div class="fa" style="display: inline-block; width: 40px; position: absolute; right:10px; top:10px; opacity: 1; z-index:100 "><i class="fa fa-thumbs-up" aria-hidden="true"></i> 10</div>
+                <img class="card-img-top image-fluid" style="background-color:rgba(0, 0, 0, 0.6); height: 50%;opacity: 0.8;"  alt="Card image cap">
+                <div class="card-body">
+                <div>
+                    <b>{{card.name}}</b>
+                    <br>
+                    <small>product location</small>
+                </div>
+                <div>
+                    <b>{{card.price}}</b>
+                    <br>
+                    <small>time</small>
+                </div>
+                </div>
+              </div>
+     
+          </div>
+       </div>
+    </div>
+    
+    <button style="height:100px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="ml-2 btn" (click)="onNextSearchPosition()"><i style="color: black;" class="fas fa-angle-right"></i></button>
+
+</div>
+<ng-template #elseblock> 
+    <div style="height:270px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;" >
+   No items found at this location
+  </div>
+  </ng-template>
+
