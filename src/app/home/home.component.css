@@ -9,7 +9,8 @@
        height:30px;
        width: 30px;
        border-radius: 15px;
-       background-image: url('../../assets/dubai.png');
+       background-color: aliceblue;
+       /* background-image: url('../../assets/dubai.png'); */
        background-position: center;
        background-repeat: no-repeat;
        background-size: cover;

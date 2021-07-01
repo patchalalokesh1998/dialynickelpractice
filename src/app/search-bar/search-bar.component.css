@@ -1,9 +1,100 @@
-.headerouter
-{
-    height: 70px;
-    background-color: black;
+
+.flex-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+  }
+   
+  .flex-item-left {
+    flex: 50%;
+  }
+   
+  .flex-item-right {
+    flex: 50%;
+  }
+   
+  /* Responsive layout - makes a one column layout instead of a two-column layout */
+  /* @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  } */
+  /* datalist{
+    display: none;
+  } */
+  /* input::-webkit-calendar-picker-indicator {
+    display: none;
+  } */
+  /* input[list="browsers"]
+  {
+      max-width:60%;
+      padding: 20px 20px 20px 20px;
+      font: 15px Arial, Helvetica, sans-serif;
+      color: #666;
+  }
+  
+  .optionclass
+  {
+    background-color: black;
+  }
+  
+  input[list="browser"]
+  {
+      max-width:100%;
+      padding: 20px 20px 20px 20px;
+      font: 15px Arial, Helvetica, sans-serif;
+      color: #666;
+  }
+   
+ 
+    input::-webkit-calendar-picker-indicator {
+      display: none;
+      color:white;
+    } */
+    /* datalist {
+      position: absolute;
+      max-height: 20em;
+      border: 0 none;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  
+      /* option active styles */
+    /* datalist option:hover, datalist option:focus {
+      color: #fff;
+      background-color: #036;
+      outline: 0 none;
+    } */
+/*     
+    datalist option {
+      font-size: 0.8em;
+      padding: 0.3em 1em;
+      background-color:black;
+      cursor: pointer;
+    }
+     */
+ 
+  #menu2
+  {
+    width: 374px;
+  }
+ 
+  .mainHeader
+  {
+    background-color: black;
+  }
+  body {
+    margin: 10px;
+}
+ 
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+ 
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.dropdown-menu{
+  top:62px;
 }

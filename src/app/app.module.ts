@@ -14,6 +14,14 @@ import { Page2Component } from './page2/page2.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AgmCoreModule } from '@agm/core';
 import {MapsComponent} from './maps/maps.component';
+import { FilterpipePipe } from './pipes/filterpipe.pipe';
+import { ProfileComponent } from './components/profile/profile.component';
+import { MypostsComponent } from './components/myposts/myposts.component';
+import { MycommunityComponent } from './components/mycommunity/mycommunity.component';
+import { MyreviewComponent } from './components/myreview/myreview.component';
+import { CardComponent } from './utility/card/card.component';
+import { RatingcardComponent } from './utility/ratingcard/ratingcard.component';
+import { MycommunitycardComponent } from './utility/mycommunitycard/mycommunitycard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +32,15 @@ import {MapsComponent} from './maps/maps.component';
     Page1Component,
     Page2Component,
     SearchBarComponent,
-    MapsComponent
+    MapsComponent,
+    FilterpipePipe,
+    ProfileComponent,
+    MypostsComponent,
+    MycommunityComponent,
+    MyreviewComponent,
+    CardComponent,
+    RatingcardComponent,
+    MycommunitycardComponent
   ],
   imports: [
     BrowserModule,

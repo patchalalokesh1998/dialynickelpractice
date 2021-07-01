@@ -1,0 +1,104 @@
+<div class="container-fluid">
+
+    <div style="margin-top:10px; display: flex; justify-content: flex-end;">
+      <button class="btn btn-success" style="border-radius:30px">
+        Latest Reviews
+      </button>
+      <button class="btn btn-secoundary ml-2" style="border-radius:30px">
+       Old reviews
+      </button >
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div class="overall-rating">
+
+            <div class="regular-row">
+                <div class="row-element">
+                    <span class="rating-span">4.5</span>
+                </div>
+                <div class="row-element">
+                    <div class="andromeda">
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span class="star on"></span>
+                        <span class="star half"></span>
+                    </div>
+                </div>
+                <div class="row-element">
+                    <span class="reviews">Reviews</span>
+                </div>
+            </div>
+            <div class="regular-row">
+                <div class="rating-shares">
+                    <div class="rating-share">
+                        <div class="first-num">
+                            <span class="number-001">5</span>
+                        </div>
+                        <div class="progress-adjustment">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="first-num">
+                            <span class="number-001">150</span>
+                        </div>
+                    </div>
+    
+                    <div class="rating-share">
+                        <div class="first-num">
+                            <span class="number-001">4</span>
+                        </div>
+                        <div class="progress-adjustment">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="first-num">
+                            <span class="number-001">20</span>
+                        </div>
+                    </div>
+    
+                    <div class="rating-share">
+                        <div class="first-num">
+                            <span class="number-001">3</span>
+                        </div>
+                        <div class="progress-adjustment">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="first-num">
+                            <span class="number-001">10</span>
+                        </div>
+                    </div>
+    
+                    <div class="rating-share">
+                        <div class="first-num">
+                            <span class="number-001">2</span>
+                        </div>
+                        <div class="progress-adjustment">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="first-num">
+                            <span class="number-001">10</span>
+                        </div>
+                    </div>
+    
+                    <div class="rating-share">
+                        <div class="first-num">
+                            <span class="number-001">1</span>
+                        </div>
+                        <div class="progress-adjustment">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="first-num">
+                            <span class="number-001">10</span>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div *ngFor="let i of [1,2,3,4,5,6,7,8]" class="col-10 col-md-6">
+            <app-ratingcard></app-ratingcard>
+        </div>
+       
+    </div>
+</div>

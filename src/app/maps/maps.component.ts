@@ -99,4 +99,5 @@ filtercards:any;
     return deg * (Math.PI / 180)
   }
 
+
 }

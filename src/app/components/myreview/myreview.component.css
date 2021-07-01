@@ -1,0 +1,92 @@
+/* overall rating css */
+.overall-rating{
+    width: 250px;
+    min-height: 155px;
+    background-color: transparent;
+}
+.regular-row{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.row-element{
+    display: inline-block;
+}
+.rating-span{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+}
+
+/*overall rating stars css */
+.overall-rating .star {
+    font-size: 16px;
+    width: 14px;
+    display: inline-block;
+    color: gray;
+}
+.overall-rating .star:last-child {
+    margin-right: 0;
+}
+.overall-rating .star:before {
+    content:'\2605';
+}
+.overall-rating .star.on {
+    color: gold;
+}
+.overall-rating .star.half:after {
+    content:'\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -13px;
+    width: 7px;
+    overflow: hidden;
+}
+.overall-rating .andromeda{
+    padding-left: 5px;
+}
+/*overall rating stars css end*/
+.reviews{
+    font-size: 12px;
+    color: rgb(38, 38, 121);
+    font-weight: 600;
+    padding-top: 5px;
+    margin-left: 5px;
+    display: inline-block;
+}
+.rating-shares{
+    width: 100%;
+}
+.rating-share{
+    display: flex;
+}
+.first-num{
+    display: inline-block;
+}
+.number-001{
+    font-size: 12px;
+    color: rgb(38, 38, 121);
+    display: inline-block;
+    padding-right: 4px;
+}
+.progress-adjustment{
+    padding-top:5px;
+    padding-right: 5px;
+}
+.progress {
+    width:200px;
+    height:10px;
+    background-color: #9a9a97;
+    position:relative;
+    border-radius:5px;
+}
+.progress:after {
+    content:'\A';
+    position:absolute;
+    background:gold;
+    top:0; bottom:0;
+    left:0; 
+    width:50%;
+    border-radius: 5px;
+}

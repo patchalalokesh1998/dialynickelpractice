@@ -1,0 +1,134 @@
+/* ratings card css */
+.rating-card{
+    height: 160px;
+    margin-top: 10px;
+   
+    border: 1px solid rgb(209, 205, 205);
+    border-radius: 7px;
+    background-color: white;
+}
+.title{
+    width: 100%;
+    display: flex;
+    text-align: center;
+     border-bottom: 1px solid rgb(209, 205, 205);;
+}
+.title-row{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: max-content;
+}
+.title-image{
+    width: 30px;
+    height: 30px;
+    background-image: url("https://itchronicles.com/wp-content/uploads/2020/11/where-is-ai-used-1024x683.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    display: inline-block;
+}
+.title-mention{
+    display: flex;
+    align-items: center;
+}
+.title-mention span{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    margin-left: 7px;
+    color: rgb(21, 21, 78);
+    display: inline-block;
+}
+.andromeda{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.andromeda-row{
+    padding-top: 10px;
+    padding-bottom: 3px;
+    width: max-content;
+}
+
+/* stars css */
+.star {
+    font-size: 30px;
+    width: 25px;
+    display: inline-block;
+    color: gray;
+}
+.star:last-child {
+    margin-right: 0;
+}
+.star:before {
+    content:'\2605';
+}
+.star.on {
+    color: gold;
+}
+.star.half:after {
+    content:'\2605';
+    color: gold;
+    position: absolute;
+    margin-left: -25px;
+    width: 12px;
+    overflow: hidden;
+}
+/* stars css end*/
+
+.review-count{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.review-count span{
+    font-size: 11px;
+    color: rgb(21, 21, 78);
+    font-weight: 600;
+}
+
+.review-info{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.review-info-row{
+    display: flex;
+    padding-bottom: 5px;
+    width: max-content;
+}
+
+.review-by{
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.review-by span{
+    font-size: 11px;
+    color: rgb(21, 21, 78);
+    font-weight: 600;
+}
+.separator{
+    display: flex;
+    align-items: center;
+}
+.separator i{
+    color: rgb(21, 21, 78);
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 4px;
+}
+.user-image{
+    margin-top: 3px;
+    height: 15px;
+    width: 15px;
+    background-image: url("https://static.tvmaze.com/uploads/images/medium_untouched/62/156066.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+}

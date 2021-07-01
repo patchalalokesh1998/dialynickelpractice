@@ -1,0 +1,24 @@
+/* .profile
+{
+    background-color:rgb(155, 147, 147);
+} */
+
+.navigation-menu
+{
+    display: flex;
+}
+
+.link
+{
+    color:black;
+}
+.bg-ligh
+{
+    background-color: #dae0e5;
+}
+
+.active>.bg-ligh
+{
+    background-color: rgb(156, 243, 156);
+    color:white;
+}

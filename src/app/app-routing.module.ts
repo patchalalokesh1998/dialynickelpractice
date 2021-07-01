@@ -8,6 +8,10 @@ import {Page2Component} from './page2/page2.component';
 import {AuthenticationGuard} from './authgaurds/authentication.guard';
 import {SearchBarComponent} from './search-bar/search-bar.component';
 import {MapsComponent} from './maps/maps.component';
+import {ProfileComponent} from './components/profile/profile.component';
+import {MycommunityComponent} from './components/mycommunity/mycommunity.component';
+import {MypostsComponent} from './components/myposts/myposts.component';
+import {MyreviewComponent} from './components/myreview/myreview.component';
 const routes: Routes = [
   {
   path:'login',
@@ -33,7 +37,26 @@ const routes: Routes = [
     [
       {
         path:'page1',
-        component:Page1Component
+        component:ProfileComponent,
+        children:[
+        {
+          path:'mycommunity',
+          component:MycommunityComponent
+        },
+        {
+          path:'myposts',
+          component:MypostsComponent
+        },
+        {
+          path:'myreview',
+          component:MyreviewComponent
+        },
+        {
+          path:'',
+          redirectTo:"mycommunity",
+          pathMatch:'full'
+        }
+      ]
 
       },
       {
@@ -45,14 +68,14 @@ const routes: Routes = [
       {
         path:'',
         pathMatch:"full",
-        redirectTo:'page1'
+        redirectTo:'home/page1'
       }
     ]
 
   },
   {
     path:'',
-    redirectTo:'home',
+    redirectTo:'home/page1',
     pathMatch:"full"
 
   }

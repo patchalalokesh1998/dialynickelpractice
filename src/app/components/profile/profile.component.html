@@ -1,0 +1,61 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="mt-4">
+              <div class="profile bg-light" style="padding:10px;display: flex;justify-content: space-between; ">
+                <div class="profile-left" style="display: flex; align-items: center;">
+                    <div><img src="../../../assets/dubai.png" style="width: 100px; height: 100px;" class="image-fluid rounded-circle"></div>
+                <div style="margin-left: 10px;"><p><b>Danil marshel</b></p>
+                <p><small>dmarshall</small></p>
+                <div>rating</div>
+                <p><small>indian police, IN</small></p>
+                </div>
+                </div>
+                <div class="profile-right">edit icon</div>
+              
+              </div>
+            </div>
+            <a [routerLink]="['/home','page1','myposts']" class="link " style="text-decoration: none;" routerLinkActive="active">
+                <div class=" mt-3 p-3 navigation-menu bg-ligh" style="display: flex;" >
+                    <div>my posts</div>
+                    <div style="margin-left: 5px;" >icon</div> 
+                 </div>
+            </a>
+            <a [routerLink]="['/home','page1','mycommunity']" class="link " style="text-decoration: none;" routerLinkActive='active'>
+                <div class=" mt-3 p-3 navigation-menu bg-ligh" >
+                   
+                    <div>my community</div>
+                   <div style="margin-left: 5px;">icon</div> 
+                </div>
+            </a>
+            <a [routerLink]="['/home','page1','myreview']" class="link " style="text-decoration: none;" routerLinkActive='active' >
+                <div class=" mt-3 p-3 navigation-menu bg-ligh" >
+                    
+                    <div>my review</div>
+                    <div style="margin-left: 5px;">icon</div>
+                 </div>
+            </a>
+           
+
+
+            <div class="bg-light mt-3 p-3 navigation-menu">
+                
+                <div>skill details</div>
+               <div style="margin-left: 5px;">icon</div>
+             </div>
+             <div class="bg-light mt-3 p-3 navigation-menu">
+                
+                <div>notifications</div>
+               <div style="margin-left: 5px;">icon</div>
+             </div>
+             <div class="bg-light mt-3 p-3 navigation-menu">
+                <div>settings</div>
+                <div style="margin-left: 5px;">icon</div>
+             </div>
+        </div>
+        <div style="height: 100vh; overflow: auto;" class="col-12 col-md-8">
+           <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.card-img-top
+{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.fa
+{
+    color: white;
+}
+.card{
+    width: 100%;
+    position: relative;
+     border-radius: 20px;
+     height:34vh;
+}
+.card-body
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .8em;
+    padding: 10px
+}

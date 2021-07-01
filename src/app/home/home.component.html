@@ -18,10 +18,10 @@
           <div *ngIf="loggedin; else elseblock"  class="header-rightpart form-inline my-2 my-lg-0">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle profile" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link  profile" href="#" [style.background-image]="myImage"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
                    
                   
                     <a class="dropdown-item" (click)="logout()">Logout</a>
@@ -44,7 +44,9 @@
           
         </div>
       </nav>
-      <div class="container">
+      <div>
+
+        <!-- <img [src]="'data:image/jpeg;base64,'+loggedinfo.image" alt=""> -->
          <router-outlet></router-outlet>
       </div>
 </div>
