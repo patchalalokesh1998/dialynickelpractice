@@ -12,6 +12,8 @@ import {ProfileComponent} from './components/profile/profile.component';
 import {MycommunityComponent} from './components/mycommunity/mycommunity.component';
 import {MypostsComponent} from './components/myposts/myposts.component';
 import {MyreviewComponent} from './components/myreview/myreview.component';
+import {MainhomeComponent} from './components/mainhome/mainhome.component';
+import {ProductdetailsComponent} from './components/productdetails/productdetails.component'
 const routes: Routes = [
   {
   path:'login',
@@ -65,6 +67,7 @@ const routes: Routes = [
         canActivate:[AuthenticationGuard]
       },
      
+     
       {
         path:'',
         pathMatch:"full",
@@ -74,8 +77,16 @@ const routes: Routes = [
 
   },
   {
+    path:"mainhome",
+    component:MainhomeComponent
+  },
+  {
+    path:'productdetails/:id',
+    component:ProductdetailsComponent
+  },
+  {
     path:'',
-    redirectTo:'home/page1',
+    redirectTo:'mainhome',
     pathMatch:"full"
 
   }

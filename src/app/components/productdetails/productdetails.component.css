@@ -1,0 +1,29 @@
+.ngx-gallery { display: block; margin-bottom: 20px; }
+
+.banner>div>div>small
+{
+    margin-left: 10px;
+}
+
+agm-map
+{
+    width: 100%;
+    height: 300px;
+}
+
+.maintextcolor
+{
+    color:#356083;
+}
+
+.banner{
+    position: relative;
+}
+/* .bannerbackground
+{
+    position: absolute;
+    top: 7%;
+    width: 100vw;
+    height: 24vh;
+    background-color: grey;
+} */

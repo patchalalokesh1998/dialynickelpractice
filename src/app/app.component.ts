@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthserviceService} from './services/authservice.service';
+import {ProductsService} from './services/products.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +8,18 @@ import {AuthserviceService} from './services/authservice.service';
 })
 export class AppComponent {
   title = 'dialynickelpractice';
-  constructor(private service:AuthserviceService)
+   num=0;
+  constructor(private service:AuthserviceService, private productdetailservice:ProductsService)
   {
 
   }
   ngOnInit()
   {
-    this.service.setuser()
+    alert('hi')
+    this.num=this.num+1;
+    console.log(this.num)
+    this.service.setuser();
+    this.productdetailservice.getproducts();
   }
 
 }

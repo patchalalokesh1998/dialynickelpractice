@@ -51,6 +51,7 @@ export class RegisterComponent implements OnInit {
 
     if (image.target.files.length > 0) {
       const file = image.target.files[0];
+      console.log(file);
       console.log(file.size);
       console.log(file.type);
      const filesize =Math.round((file.size/1024))

@@ -1,0 +1,164 @@
+
+<div class="bannerbackground">
+
+</div>
+<div class="container">
+    <div *ngIf="productdetail" class="row">
+        
+        <div class="col-12 col-md-5">
+            <ngx-gallery class="ngx-gallery" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+            <div >
+                <div style="display: flex; justify-content: space-between;">
+                 <button class="btn btn-primary" style="width:49%;">
+                    contact seller
+                 </button>
+                 <button class="btn btn-success" style="width:49%;">
+                 Place Offer
+                 </button>
+                 
+                </div>
+                <div style="display: flex; padding:15px " class="shadow bg-white rounded">
+                  <div style="text-align:center; width:36%; padding:10px; border-right:1px solid #f5f5f5">icon1</div>
+                  <div style="text-align: center; width:36%; padding:10px;border-right:1px solid #f5f5f5">icon2</div>
+                  <div style="text-align: center; width:36%; padding:10px"> icon3</div>
+                </div>
+            </div>
+           
+
+        </div>
+        <div class="col-12 col-md-7">
+           <div style="display: flex; justify-content: space-between; align-items: center;">
+             <div style="display: flex; align-items: center;">
+                <img class="image-fluid" [src]="productdetail[0].seller.avatar" style="width:90px; height:90px; border-radius: 50px;" alt="profilepic">
+                 <div style="padding-left: 10px;">
+                     <p style="margin-bottom: 0px;"><b>{{productdetail[0].seller.first_name}}</b></p>
+                     <p style="margin-bottom: 0px;"><small>{{productdetail[0].seller.active? "Online":"Offline"}}</small></p>
+
+                 </div> 
+            </div>
+            <div>
+             <div>Posted {{productdetail[0].time_text}}</div>
+             <star-rating [value]="getratingvalue(productdetail[0].totalRating)" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="true" ></star-rating>
+             <div>{{productdetail[0].totalRating}}/5 ({{productdetail[0].view_count}})</div>
+            </div>
+
+           </div>
+           <div class="banner">
+            <div  style="padding:20px 0px 20px 0px;">
+                
+                <p><small>hash tags</small></p>
+                <h4 class="maintextcolor">{{productdetail[0].name}}</h4>
+                <div  style="display: flex; width:80%; justify-content: space-between; flex-wrap: wrap;">
+                    <div>
+                        <small>{{productdetail[0].location}}</small>
+                    </div>
+                    <div  style="margin-left: 20px;">
+                        <small>{{productdetail[0].view_count}}</small>
+                    </div>
+                    <div  style="margin-left: 20px;">
+                        <small>{{getdate(productdetail[0].time) | date:'mediumDate'}}</small>
+                    </div>
+                </div>
+            </div>
+    
+            <div #banner id="banner" class="bannershare" style="display: flex; justify-content: space-between;">
+                <div style="padding:10px; display: flex; background-color: black; color: white;">
+                  <div style="border-right:1px solid white ; padding-right: 5px;">
+                    <div><small>Fixed Price</small></div>
+                  <div>
+                    <b>$500</b>
+                </div>
+                  </div>
+                  <div style="padding-left: 5px;">
+                     <div style="text-align: center;">Hourly Range</div>
+                     <div ><b>$50-$70</b></div>
+    
+                  </div>
+                   
+                </div>
+                <div style="display: flex;"> 
+                   <div>icon1</div>
+                   <div style="margin-left: 10px;">icon2</div>
+                </div>
+            </div>
+    
+           </div>
+          
+        <div class="mt-4">
+          <p class="maintextcolor"><b>Availability</b></p>
+          <div class="Availability" >
+              <button *ngFor="let day of days" class="btn btn-secoundary ml-2" [disabled]="!checkavilability(day)" [ngClass]="{'btn-success':checkavilability(day)}">{{day}}</button>
+
+              <!-- <button class="btn btn-sucess ml-2">mon</button>
+              <button class="btn btn-sucess ml-2">thu</button>
+              <button class="btn btn-sucess ml-2">wed</button>
+              <button class="btn btn-sucess ml-2">thur</button>
+              <button class="btn btn-secoundary ml-2">fri</button>
+              <button class="btn btn-secoundary ml-2">sat</button>
+              <button class="btn btn-secoundary ml-2">sun</button> -->
+          </div>
+          <div><small>{{productdetail[0].start_time+"-"+productdetail[0].end_time}}</small></div>
+          <div class="discription">
+              <p class="maintextcolor"><b>Discription</b></p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aen
+          </div>
+          <div class="guidelines">
+               <p class="maintextcolor"><b>Buyer Guidlines</b></p>
+               <ul>
+                   <li>
+                    Lorem ipsum dolor sit amet,   
+                   </li>
+                   <li>
+                    Lorem ipsum dolor sit amet,   
+                   </li>
+                   <li>
+                    Lorem ipsum dolor sit amet,   
+                   </li>
+                   <li>
+                    Lorem ipsum dolor sit amet,   
+                   </li>
+               </ul>
+          </div>
+          <div class="categories">
+              <p class="maintextcolor"><b>Category</b></p>
+             <button class="btn btn-primary ml-2" *ngFor="let category of productdetail[0].productCategory">{{category.name}}</button>
+             <!-- <button class="btn btn-primary ml-2">category2</button>
+             <button class="btn btn-primary ml-2">category3</button> -->
+          </div>
+          <div class="location">
+              <div class="maintextcolor"><b>Location</b></div>
+              <div><small>{{productdetail[0].location}}</small></div>
+          </div>
+
+          <div class="map">
+            <agm-map  [latitude]="getlat(productdetail[0].lat)" [longitude]="getlng(productdetail[0].lng)">
+                
+              </agm-map>
+          </div>
+
+
+        </div>
+        
+
+           
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div  style="display: flex; justify-content: space-between;"><b>Similar Offers</b>
+        <div>
+            <button (click)="leftmove($event)" class="btn btn-primary">&lt;</button>
+            <button (click)="rightmove($event)" class="btn btn-primary ml-2">&gt;</button>
+        </div>
+        </div>
+        <div #panel id="scroll" style="width:100%; height:300px; overflow-x:scroll; position: relative; left:0px; transition: 0.5s ease-in;">
+        <div style="white-space: nowrap;">
+          <div style="display: inline-block; width: 300px;" class="mr-2" *ngFor="let product of similarproducts">
+            <app-card [product]="filterproduct(product)"></app-card>
+          </div>
+           
+        </div>
+        </div>
+    </div>
+
+</div>

@@ -22,6 +22,10 @@ import { MyreviewComponent } from './components/myreview/myreview.component';
 import { CardComponent } from './utility/card/card.component';
 import { RatingcardComponent } from './utility/ratingcard/ratingcard.component';
 import { MycommunitycardComponent } from './utility/mycommunitycard/mycommunitycard.component';
+import { MainhomeComponent } from './components/mainhome/mainhome.component';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { NgxGalleryModule } from 'ngx-gallery-9';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import { MycommunitycardComponent } from './utility/mycommunitycard/mycommunityc
     MyreviewComponent,
     CardComponent,
     RatingcardComponent,
-    MycommunitycardComponent
+    MycommunitycardComponent,
+    MainhomeComponent,
+    ProductdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +54,11 @@ import { MycommunitycardComponent } from './utility/mycommunitycard/mycommunityc
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgxGalleryModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDXsrI41fGiRppoVY1aK-e37nZOGpgrRVE'
-    })
+    }),
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
